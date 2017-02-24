@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <weblogic-application xmlns="http://www.bea.com/ns/weblogic/90">
+
     <classloader-structure>
-        <module-ref>
-            <module-uri>app1-1.0.0.jar</module-uri>
-        </module-ref>
-        <module-ref>
-            <module-uri>app2-1.0.0.jar</module-uri>
-        </module-ref>
+
+        <classloader-structure>
+            <module-ref>
+                <module-uri>app1-1.0.0.war</module-uri>
+            </module-ref>
+        </classloader-structure>
+
+        <!--
+
+                     <module-ref>
+                         <module-uri>app2-1.0.0.jar</module-uri>
+                     </module-ref>
+             -->
+
         <classloader-structure>
             <module-ref>
                 <module-uri>login-1.0.war</module-uri>
             </module-ref>
         </classloader-structure>
+
     </classloader-structure>
+
 </weblogic-application>

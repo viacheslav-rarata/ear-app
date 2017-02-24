@@ -12,6 +12,6 @@
 
     <artifactId>app1</artifactId>
     <version>1.0.0</version>
-    <packaging>ejb</packaging>
+    <packaging>war</packaging>
     
 </project>
