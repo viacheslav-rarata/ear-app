@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class AppFirstServlet extends HttpServlet {
+
     private static final int index = 0;
     private static final int[] count = { index };
 
