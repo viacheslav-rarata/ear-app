@@ -21,15 +21,12 @@
             <version>1.0.0</version>
             <type>war</type>
         </dependency>
-        <!--
-
-                <dependency>
-                    <groupId>org.demo.app</groupId>
-                    <artifactId>app2</artifactId>
-                    <version>1.0.0</version>
-                    <type>ejb</type>
-                </dependency>
-        -->
+        <dependency>
+            <groupId>org.demo.app</groupId>
+            <artifactId>app2</artifactId>
+            <version>1.0.0</version>
+            <type>war</type>
+        </dependency>
         <dependency>
             <groupId>org.demo.app</groupId>
             <artifactId>login</artifactId>
@@ -46,5 +43,5 @@
             </plugin>
         </plugins>
     </build>
-    
+
 </project>
