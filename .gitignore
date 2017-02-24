@@ -68,11 +68,12 @@ crashlytics-build.properties
 fabric.properties
 
 .idea/
-app1/
-app2/
+#app1/
+#app2/
 ear-app.iml
 ear/ear.iml
 ear/pom.xml
 lib/
-login/
+#login/
 pom.xml
+*.iml
