@@ -9,12 +9,11 @@
             </module-ref>
         </classloader-structure>
 
-        <!--
-
-                     <module-ref>
-                         <module-uri>app2-1.0.0.jar</module-uri>
-                     </module-ref>
-             -->
+        <classloader-structure>
+            <module-ref>
+                <module-uri>app2-1.0.0.war</module-uri>
+            </module-ref>
+        </classloader-structure>
 
         <classloader-structure>
             <module-ref>

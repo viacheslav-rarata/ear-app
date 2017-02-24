@@ -12,7 +12,7 @@ public class AppFirstServlet extends HttpServlet {
     private static final int[] count = { index };
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().print("APP-1 working!" + " visits: " + count[index]);
+        response.getWriter().print("!!! APP-1 working!" + " visits: " + count[index]);
         count[index]++;
     }
 
