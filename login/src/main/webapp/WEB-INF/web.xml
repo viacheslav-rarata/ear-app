@@ -22,6 +22,15 @@
         <url-pattern>/app2/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>org.app.login.LoginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/main/*</url-pattern>
+    </servlet-mapping>
+
     <security-role>
         <role-name>ROLE_TERMINAL</role-name>
     </security-role>
@@ -29,6 +38,14 @@
     <security-role>
         <role-name>ROLE_EMISSION</role-name>
     </security-role>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
 
     <security-constraint>
         <web-resource-collection>
@@ -55,4 +72,47 @@
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>App Main URLs</web-resource-name>
+            <url-pattern>/main/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ROLE_EMISSION</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Shared Resources</web-resource-name>
+            <url-pattern>/error.jsp</url-pattern>
+            <url-pattern>/login.jsp</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Common URLs</web-resource-name>
+            <!--<url-pattern>/router</url-pattern>-->
+            <url-pattern>/main</url-pattern>
+            <url-pattern>/app1</url-pattern>
+            <url-pattern>/app2</url-pattern>
+            <!--<url-pattern>/*</url-pattern>-->
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ROLE_TERMINAL</role-name>
+            <role-name>ROLE_EMISSION</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
 </web-app>

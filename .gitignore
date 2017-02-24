@@ -1,5 +1,9 @@
 .idea/
 lib/
 target/
-pom.xml
+
+ear-app.iml
+ear/ear.iml
+
 *.iml
+*/target
