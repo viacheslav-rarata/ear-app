@@ -72,8 +72,9 @@ fabric.properties
 #app2/
 ear-app.iml
 ear/ear.iml
-ear/pom.xml
+#ear/pom.xml
 lib/
 #login/
-pom.xml
+#pom.xml
 *.iml
+*/target
