@@ -8,11 +8,11 @@ import java.io.IOException;
 
 public class AppSecondServlet extends HttpServlet {
 
-    private static int count;
+    private static final int index = 0;
+    private static final int[] count = { index };
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().print(new Message().getMessage() + " visits: " + count);
-        System.out.println("visits: " + count);
-        count++;
+        response.getWriter().print("APP-2 working!" + " visits: " + count[index]);
+        count[index]++;
     }
 }
