@@ -15,18 +15,20 @@
     <packaging>war</packaging>
 
     <dependencies>
+<!--
         <dependency>
             <groupId>org.demo.app</groupId>
             <artifactId>app1</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.demo.app</groupId>
             <artifactId>app2</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
+-->
     </dependencies>
 
 </project>

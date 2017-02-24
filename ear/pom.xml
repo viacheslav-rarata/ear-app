@@ -18,15 +18,18 @@
         <dependency>
             <groupId>org.demo.app</groupId>
             <artifactId>app1</artifactId>
-            <version>1.0.1</version>
-            <type>ejb</type>
+            <version>1.0.0</version>
+            <type>war</type>
         </dependency>
-        <dependency>
-            <groupId>org.demo.app</groupId>
-            <artifactId>app2</artifactId>
-            <version>1.0.3</version>
-            <type>ejb</type>
-        </dependency>
+        <!--
+
+                <dependency>
+                    <groupId>org.demo.app</groupId>
+                    <artifactId>app2</artifactId>
+                    <version>1.0.0</version>
+                    <type>ejb</type>
+                </dependency>
+        -->
         <dependency>
             <groupId>org.demo.app</groupId>
             <artifactId>login</artifactId>
