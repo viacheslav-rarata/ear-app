@@ -9,13 +9,6 @@
     <version>1.0</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>app1</module>
-        <module>app2</module>
-        <module>login</module>
-        <module>ear</module>
-    </modules>
-
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -25,4 +18,28 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>default</id>
+            <modules>
+                <module>app1</module>
+                <module>app2</module>
+                <module>login</module>
+                <module>ear</module>
+            </modules>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>app1</id>
+            <modules>
+                <module>app1</module>
+                <!--<module>ear</module>-->
+            </modules>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 </project>
