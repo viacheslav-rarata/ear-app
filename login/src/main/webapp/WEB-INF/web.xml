@@ -75,6 +75,19 @@
 
     <security-constraint>
         <web-resource-collection>
+            <web-resource-name>App Main URLs</web-resource-name>
+            <url-pattern>/main/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ROLE_EMISSION</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
             <web-resource-name>Shared Resources</web-resource-name>
             <url-pattern>/error.jsp</url-pattern>
             <url-pattern>/login.jsp</url-pattern>
@@ -84,13 +97,14 @@
         </user-data-constraint>
     </security-constraint>
 
-    <!--<security-constraint>
+    <security-constraint>
         <web-resource-collection>
             <web-resource-name>Common URLs</web-resource-name>
-            <url-pattern>/router</url-pattern>
+            <!--<url-pattern>/router</url-pattern>-->
             <url-pattern>/main</url-pattern>
             <url-pattern>/app1</url-pattern>
             <url-pattern>/app2</url-pattern>
+            <!--<url-pattern>/*</url-pattern>-->
         </web-resource-collection>
         <auth-constraint>
             <role-name>ROLE_TERMINAL</role-name>
@@ -99,6 +113,6 @@
         <user-data-constraint>
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
-    </security-constraint>-->
+    </security-constraint>
 
 </web-app>

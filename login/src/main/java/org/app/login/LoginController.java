@@ -9,7 +9,8 @@ import java.io.IOException;
 public class LoginController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().print("main page");
+        response.getWriter().print("Login");
+//        response.sendRedirect("index.jsp");
     }
 }
 
