@@ -5,24 +5,6 @@
          metadata-complete="true">
 
     <servlet>
-        <servlet-name>Login</servlet-name>
-        <servlet-class>org.app.login.LoginServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Login</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>AppSecond</servlet-name>
-        <servlet-class>org.app.second.AppSecondServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AppSecond</servlet-name>
-        <url-pattern>/app2/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>LoginController</servlet-name>
         <servlet-class>org.app.login.LoginController</servlet-class>
     </servlet>
@@ -31,14 +13,15 @@
         <url-pattern>/main/*</url-pattern>
     </servlet-mapping>
 
+    <!-- ROLES -->
     <security-role>
         <role-name>ROLE_TERMINAL</role-name>
     </security-role>
-
     <security-role>
         <role-name>ROLE_EMISSION</role-name>
     </security-role>
 
+    <!-- AUTHENTICATION -->
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
@@ -47,6 +30,7 @@
         </form-login-config>
     </login-config>
 
+    <!-- TERMINAL -->
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>App First URLs</web-resource-name>
@@ -60,6 +44,7 @@
         </user-data-constraint>
     </security-constraint>
 
+    <!-- EMISSION -->
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>App Second URLs</web-resource-name>
@@ -72,4 +57,44 @@
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
+
+    <!-- LOGIN MODULE -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>App First URLs</web-resource-name>
+            <url-pattern>/main/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ROLE_EMISSION</role-name>
+            <role-name>ROLE_TERMINAL</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <!-- ACCESS FOR ALL AUTHORIZED-->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Common URLs</web-resource-name>
+            <url-pattern>/main</url-pattern>
+            <url-pattern>/app1</url-pattern>
+            <url-pattern>/app2</url-pattern>
+            <url-pattern>main.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ROLE_TERMINAL</role-name>
+            <role-name>ROLE_EMISSION</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <!-- WELCOME PAGES -->
+    <welcome-file-list>
+        <welcome-file>main.jsp</welcome-file>
+        <!--<welcome-file>index.jsp</welcome-file>-->
+    </welcome-file-list>
+
 </web-app>

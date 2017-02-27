@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app">
 
-<!--
-    <security-role-assignment>
-        <role-name>ROLE_TERMINAL</role-name>
-        <principal-name>sdc_terminal</principal-name>
-    </security-role-assignment>
+    <!-- NEED ALL MODULE'S ROLES -->
     <security-role-assignment>
         <role-name>ROLE_EMISSION</role-name>
         <principal-name>sdc_emission</principal-name>
     </security-role-assignment>
-    <container-descriptor>
+    <security-role-assignment>
+        <role-name>ROLE_TERMINAL</role-name>
+        <principal-name>sdc_terminal</principal-name>
+    </security-role-assignment>
 
+    <!-- SAVING SESSION BETWEEN MODULES-->
+    <container-descriptor>
         <save-sessions-enabled>true</save-sessions-enabled>
     </container-descriptor>
+
+    <!-- SESSION TIMEOUT SECONDS-->
     <session-descriptor>
         <cookie-max-age-secs>30</cookie-max-age-secs>
     </session-descriptor>
--->
 
 </weblogic-web-app>
