@@ -40,6 +40,29 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
+                <configuration>
+
+                    <modules>
+                        <webModule>
+                            <groupId>org.demo.app</groupId>
+                            <artifactId>app1</artifactId>
+                            <contextRoot>/my-app1</contextRoot>
+                        </webModule>
+
+                        <webModule>
+                            <groupId>org.demo.app</groupId>
+                            <artifactId>app2</artifactId>
+                            <contextRoot>/my-app2</contextRoot>
+                        </webModule>
+
+                        <webModule>
+                            <groupId>org.demo.app</groupId>
+                            <artifactId>login</artifactId>
+                            <contextRoot>/my-login</contextRoot>
+                        </webModule>
+                    </modules>
+
+                </configuration>
             </plugin>
         </plugins>
     </build>
