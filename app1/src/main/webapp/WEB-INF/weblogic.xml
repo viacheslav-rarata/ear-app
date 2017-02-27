@@ -15,7 +15,7 @@
         <save-sessions-enabled>true</save-sessions-enabled>
     </container-descriptor>
     <session-descriptor>
-        <cookie-max-age-secs>30</cookie-max-age-secs>
+        <cookie-max-age-secs>0</cookie-max-age-secs>
     </session-descriptor>
 -->
 

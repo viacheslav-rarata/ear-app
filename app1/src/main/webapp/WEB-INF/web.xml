@@ -5,13 +5,15 @@
          metadata-complete="true">
 
     <servlet>
-        <servlet-name>Login</servlet-name>
-        <servlet-class>org.app.login.LoginServlet</servlet-class>
+        <servlet-name>AppFirst</servlet-name>
+        <servlet-class>org.app.first.AppFirstServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Login</servlet-name>
+        <servlet-name>AppFirst</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
+
+    <!--
 
     <servlet>
         <servlet-name>AppSecond</servlet-name>
@@ -22,15 +24,6 @@
         <url-pattern>/app2/*</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>LoginController</servlet-name>
-        <servlet-class>org.app.login.LoginController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>LoginController</servlet-name>
-        <url-pattern>/main/*</url-pattern>
-    </servlet-mapping>
-
     <security-role>
         <role-name>ROLE_TERMINAL</role-name>
     </security-role>
@@ -38,14 +31,6 @@
     <security-role>
         <role-name>ROLE_EMISSION</role-name>
     </security-role>
-
-    <login-config>
-        <auth-method>FORM</auth-method>
-        <form-login-config>
-            <form-login-page>/login.jsp</form-login-page>
-            <form-error-page>/error.jsp</form-error-page>
-        </form-login-config>
-    </login-config>
 
     <security-constraint>
         <web-resource-collection>
@@ -72,4 +57,5 @@
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
+-->
 </web-app>
