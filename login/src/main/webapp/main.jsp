@@ -23,7 +23,7 @@
     <% } %>
 
     <%-- show links without access --%>
-    <h4>default links: </h4>
+    <h4>default links:</h4>
     <a href="/my-app1/login/app1/">module app1</a>
     <a href="/my-app2/app2">module app2</a>
 

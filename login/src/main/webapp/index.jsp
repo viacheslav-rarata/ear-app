@@ -6,8 +6,10 @@
 </head>
 <body>
     <h2>Index page</h2>
-    <a href="main/app3">app1</a>
-    <a href="main/app2">app2</a>
+    <h4>Default authorization:</h4>
+    <a href="/my-app1/login/app1">app1</a>
+    <a href="/my-app2/app2">app2</a>
+    <h4>Login authorization:</h4>
     <a href="main">main</a>
     </body>
 </html>
