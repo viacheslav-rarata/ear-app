@@ -46,19 +46,19 @@
                         <webModule>
                             <groupId>org.demo.app</groupId>
                             <artifactId>app1</artifactId>
-                            <contextRoot>/my-app1</contextRoot>
+                            <contextRoot>${app1.root}</contextRoot>
                         </webModule>
 
                         <webModule>
                             <groupId>org.demo.app</groupId>
                             <artifactId>app2</artifactId>
-                            <contextRoot>/my-app2</contextRoot>
+                            <contextRoot>${app2.root}</contextRoot>
                         </webModule>
 
                         <webModule>
                             <groupId>org.demo.app</groupId>
                             <artifactId>login</artifactId>
-                            <contextRoot>/my-login</contextRoot>
+                            <contextRoot>${login.root}</contextRoot>
                         </webModule>
                     </modules>
 

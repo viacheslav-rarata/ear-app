@@ -12,6 +12,9 @@
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        <app1.root>/my-app1</app1.root>
+        <app2.root>/my-app2</app2.root>
+        <login.root>/my-login</login.root>
     </properties>
 
     <dependencies>
@@ -24,6 +27,7 @@
     </dependencies>
 
     <profiles>
+
         <profile>
             <id>default</id>
             <modules>
@@ -36,6 +40,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
+
         <profile>
             <id>app1</id>
             <modules>
@@ -47,5 +52,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
         </profile>
+
     </profiles>
+
 </project>
