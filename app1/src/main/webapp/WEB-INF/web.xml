@@ -10,32 +10,17 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AppFirst</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>
-
-    <!--
-
-    <servlet>
-        <servlet-name>AppSecond</servlet-name>
-        <servlet-class>org.app.second.AppSecondServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AppSecond</servlet-name>
-        <url-pattern>/app2/*</url-pattern>
+        <url-pattern>/login/app1/*</url-pattern>
     </servlet-mapping>
 
     <security-role>
         <role-name>ROLE_TERMINAL</role-name>
     </security-role>
 
-    <security-role>
-        <role-name>ROLE_EMISSION</role-name>
-    </security-role>
-
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>App First URLs</web-resource-name>
-            <url-pattern>/app1/*</url-pattern>
+            <url-pattern>/login/app1/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>ROLE_TERMINAL</role-name>
@@ -45,17 +30,4 @@
         </user-data-constraint>
     </security-constraint>
 
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>App Second URLs</web-resource-name>
-            <url-pattern>/app2/*</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>ROLE_EMISSION</role-name>
-        </auth-constraint>
-        <user-data-constraint>
-            <transport-guarantee>NONE</transport-guarantee>
-        </user-data-constraint>
-    </security-constraint>
--->
 </web-app>

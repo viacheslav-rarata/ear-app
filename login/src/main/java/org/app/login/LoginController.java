@@ -25,6 +25,7 @@ public class LoginController extends HttpServlet {
 
     private void redirect(HttpServletResponse response, String url) {
         response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
+        // disable cache need for redirect
         response.setHeader("Cache-Control", "private, no-store, no-cache, must-revalidate");
         response.setHeader("Location", url);
     }

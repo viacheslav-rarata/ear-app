@@ -13,7 +13,7 @@
         <h2> Main page</h2>
     <% } %>
 
-    <%-- grand acces depend on role --%>
+    <%-- grant acces depend on role --%>
     <% if (request.isUserInRole("ROLE_EMISSION")) { %>
         <a href="/app1/login/app1/">emission</a>
         <br>
