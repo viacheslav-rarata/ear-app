@@ -8,8 +8,8 @@ import java.io.IOException;
 
 public class LoginController extends HttpServlet {
 
-    private final String moduleApp1 = "http://localhost:7001/app1/login/app1";
-    private final String moduleApp2 = "http://localhost:7001/app2/app2";
+    private final String moduleApp1 = "http://localhost:7001/my-app1/login/app1";
+    private final String moduleApp2 = "http://localhost:7001/my-app2/app2";
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final String uri = request.getRequestURI();

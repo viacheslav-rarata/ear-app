@@ -11,12 +11,12 @@
         <principal-name>sdc_terminal</principal-name>
     </security-role-assignment>
 
-    <!-- SAVING SESSION BETWEEN MODULES-->
+    <!-- SAVING SESSION BETWEEN MODULES -->
     <container-descriptor>
         <save-sessions-enabled>true</save-sessions-enabled>
     </container-descriptor>
 
-    <!-- SESSION TIMEOUT SECONDS-->
+    <!-- SESSION TIMEOUT 30 SECONDS FOR DEVELOPMENT ONLY -->
     <session-descriptor>
         <cookie-max-age-secs>30</cookie-max-age-secs>
     </session-descriptor>
