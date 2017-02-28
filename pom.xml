@@ -12,9 +12,13 @@
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        <ear-app.host>http://localhost:7001</ear-app.host>
         <app1.root>/my-app1</app1.root>
         <app2.root>/my-app2</app2.root>
         <login.root>/my-login</login.root>
+        <app1.route>/login/app1</app1.route>
+        <app2.route>/app2</app2.route>
+        <login.route>/main</login.route>
     </properties>
 
     <dependencies>

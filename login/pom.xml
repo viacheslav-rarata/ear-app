@@ -14,28 +14,34 @@
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <dependencies>
-        <!--<dependency>
-            <groupId>org.demo.app</groupId>
-            <artifactId>app1</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
-        </dependency>-->
-        <!--<dependency>
-            <groupId>org.demo.app</groupId>
-            <artifactId>app2</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
-        </dependency>-->
-    </dependencies>
-
     <build>
+        <!-- SET APPLICATION.PROPERTIES FROM POM -->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
+
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <webResources>
+                            <!-- SET WEB.XML FROM POM -->
+                            <resource>
+                                <directory>src/main/webapp</directory>
+                                <filtering>true</filtering>
+                                <includes>
+                                    <include>**/*.xml</include>
+                                </includes>
+                            </resource>
+                        </webResources>
+                    </configuration>
+                </plugin>
+            </plugins>
     </build>
 
 </project>

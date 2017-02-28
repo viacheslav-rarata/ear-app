@@ -10,9 +10,12 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
-        <url-pattern>/main/*</url-pattern>
+        <url-pattern>${login.route}/*</url-pattern>
     </servlet-mapping>
-
+    <context-param>
+        <param-name>propfile</param-name>
+        <param-value>application.properties</param-value>
+    </context-param>
     <!-- ROLES -->
     <security-role>
         <role-name>ROLE_TERMINAL</role-name>
@@ -34,7 +37,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>App First URLs</web-resource-name>
-            <url-pattern>/app1/*</url-pattern>
+            <url-pattern>${app1.route}/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>ROLE_TERMINAL</role-name>
@@ -48,7 +51,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>App Second URLs</web-resource-name>
-            <url-pattern>/app2/*</url-pattern>
+            <url-pattern>${app2.route}/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>ROLE_EMISSION</role-name>
@@ -62,7 +65,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>App First URLs</web-resource-name>
-            <url-pattern>/main/*</url-pattern>
+            <url-pattern>${login.route}/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>ROLE_EMISSION</role-name>
@@ -77,9 +80,9 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Common URLs</web-resource-name>
-            <url-pattern>/main</url-pattern>
-            <url-pattern>/app1</url-pattern>
-            <url-pattern>/app2</url-pattern>
+            <url-pattern>${login.route}</url-pattern>
+            <url-pattern>${app1.route}</url-pattern>
+            <url-pattern>${app2.route}</url-pattern>
             <url-pattern>main.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint>

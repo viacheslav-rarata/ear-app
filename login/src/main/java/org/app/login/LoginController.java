@@ -12,6 +12,7 @@ public class LoginController extends HttpServlet {
 
     private String moduleApp1;
     private String moduleApp2;
+    private String loginApp;
 
     public LoginController() {
         Properties properties = loadResources();
@@ -31,17 +32,18 @@ public class LoginController extends HttpServlet {
     }
 
     private void initModules(Properties properties) {
-        moduleApp1 = "http://localhost:7001" + properties.getProperty("app1.root") + "/login/app1";
-        moduleApp2 = "http://localhost:7001 "+ properties.getProperty("app2.root") + "/app2";
+        moduleApp1 = properties.getProperty("ear-app.host") + properties.getProperty("app1.root") + properties.getProperty("app1.route");
+        moduleApp2 = properties.getProperty("ear-app.host") + properties.getProperty("app2.root") + properties.getProperty("app2.route");
+        loginApp = properties.getProperty("login.root") + properties.getProperty("login.route");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final String uri = request.getRequestURI();
         String login =  request.getUserPrincipal().getName();
         request.getSession().setAttribute( "name", login );
-        if ("/login/main/app3".equals(uri)) {
+        if ((loginApp + "/app3").equals(uri)) {
              redirect(response, moduleApp1);
-        } else if ("/login/main/app2".equals(uri))
+        } else if ((loginApp + "/app1").equals(uri))
             redirect(response, moduleApp2);
         else
            request.getRequestDispatcher("/main.jsp").forward(request, response);
