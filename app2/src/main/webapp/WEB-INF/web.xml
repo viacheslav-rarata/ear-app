@@ -10,19 +10,17 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AppSecond</servlet-name>
-        <url-pattern>/app2/*</url-pattern>
+        <url-pattern>${app2.route}/*</url-pattern>
     </servlet-mapping>
 
-
-      <security-role>
+    <security-role>
         <role-name>ROLE_EMISSION</role-name>
     </security-role>
-
 
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>App Second URLs</web-resource-name>
-            <url-pattern>/app2/*</url-pattern>
+            <url-pattern>${app2.route}/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>ROLE_EMISSION</role-name>

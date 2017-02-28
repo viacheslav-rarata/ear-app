@@ -15,33 +15,41 @@
     <packaging>war</packaging>
 
     <build>
-        <!-- SET APPLICATION.PROPERTIES FROM POM -->
         <resources>
+            <!-- SET APPLICATION.PROPERTIES FROM POM -->
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
+            <!-- SHOW LINKS FOR PROPERTIES IN WEB.XML (FOR IDEA) -->
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
         </resources>
 
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.0.0</version>
-                    <configuration>
-                        <webResources>
-                            <!-- SET WEB.XML FROM POM -->
-                            <resource>
-                                <directory>src/main/webapp</directory>
-                                <filtering>true</filtering>
-                                <includes>
-                                    <include>**/*.xml</include>
-                                </includes>
-                            </resource>
-                        </webResources>
-                    </configuration>
-                </plugin>
-            </plugins>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <webResources>
+                        <!-- SET WEB.XML FROM POM -->
+                        <resource>
+                            <directory>src/main/webapp</directory>
+                            <filtering>true</filtering>
+                            <includes>
+                                <include>**/*.xml</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
