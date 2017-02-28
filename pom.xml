@@ -12,11 +12,15 @@
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+
         <ear-app.host>http://localhost:7001</ear-app.host>
         <ear-app.version>1.0.1</ear-app.version>
+
         <app1.root>/my-app1</app1.root>
         <app2.root>/my-app2</app2.root>
+        <vaadin.root>/my-vaadin</vaadin.root>
         <login.root>/my-login</login.root>
+
         <app1.route>/login/app1</app1.route>
         <app2.route>/app2</app2.route>
         <login.route>/main</login.route>
@@ -37,6 +41,7 @@
             <modules>
                 <module>app1</module>
                 <module>app2</module>
+                <module>vaadin</module>
                 <module>login</module>
                 <module>ear</module>
             </modules>

@@ -29,6 +29,12 @@
         </dependency>
         <dependency>
             <groupId>org.demo.app</groupId>
+            <artifactId>vaadin</artifactId>
+            <version>1.0.0</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>org.demo.app</groupId>
             <artifactId>login</artifactId>
             <version>1.0</version>
             <type>war</type>
@@ -53,6 +59,12 @@
                             <groupId>org.demo.app</groupId>
                             <artifactId>app2</artifactId>
                             <contextRoot>${app2.root}</contextRoot>
+                        </webModule>
+
+                        <webModule>
+                            <groupId>org.demo.app</groupId>
+                            <artifactId>vaadin</artifactId>
+                            <contextRoot>${vaadin.root}</contextRoot>
                         </webModule>
 
                         <webModule>
