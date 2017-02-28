@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.demo.app</groupId>
         <artifactId>ear-app</artifactId>
-        <version>1.0</version>
+        <version>${ear-app.version}</version>
     </parent>
 
     <artifactId>app2</artifactId>
