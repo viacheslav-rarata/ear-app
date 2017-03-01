@@ -23,6 +23,7 @@
 
         <app1.route>/login/app1</app1.route>
         <app2.route>/app2</app2.route>
+        <vaadin.route>/vaadin</vaadin.route>
         <login.route>/main</login.route>
     </properties>
 

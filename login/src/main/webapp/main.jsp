@@ -3,7 +3,8 @@
 <%@ page import = "java.util.ResourceBundle" %>
 <% ResourceBundle resource = ResourceBundle.getBundle("application");
     String app1 = resource.getString("app1.root") + resource.getString("app1.route");
-    String app2 = resource.getString("app2.root") + resource.getString("app2.route"); %>
+    String app2 = resource.getString("app2.root") + resource.getString("app2.route");
+    String vaadin = resource.getString("vaadin.root") + resource.getString("vaadin.route");%>
 <html>
 <head>
     <title>Main</title>
@@ -32,6 +33,7 @@
     <ul>
         <li><a href="<%= app1 %>">module app1</a></li>
         <li><a href="<%= app2 %>">module app2</a></li>
+        <li><a href="<%= vaadin %>">vaadin module</a></li>
     </ul>
 
 </body>
