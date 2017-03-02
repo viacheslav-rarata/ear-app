@@ -12,11 +12,15 @@
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+
         <ear-app.host>http://localhost:7001</ear-app.host>
         <ear-app.version>1.0.1</ear-app.version>
+
         <app1.root>/my-app1</app1.root>
         <app2.root>/my-app2</app2.root>
         <login.root>/my-login</login.root>
+        <partial-app.root>/partial-app</partial-app.root>
+
         <app1.route>/login/app1</app1.route>
         <app2.route>/app2</app2.route>
         <login.route>/main</login.route>
@@ -41,6 +45,7 @@
                 <module>ear</module>
                 <module>shared-image</module>
                 <module>partial-app</module>
+                <module>optional-string-util</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>
