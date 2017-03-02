@@ -39,6 +39,7 @@
                 <module>app2</module>
                 <module>login</module>
                 <module>ear</module>
+                <module>shared-image</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -49,7 +50,6 @@
             <id>app1</id>
             <modules>
                 <module>app1</module>
-                <!--<module>ear</module>-->
                 <module>login</module>
             </modules>
             <activation>
