@@ -40,6 +40,7 @@
                 <module>login</module>
                 <module>ear</module>
                 <module>shared-image</module>
+                <module>partial-app</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>
