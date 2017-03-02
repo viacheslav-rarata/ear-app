@@ -33,6 +33,12 @@
             <version>1.0</version>
             <type>war</type>
         </dependency>
+        <dependency>
+            <groupId>org.demo.app</groupId>
+            <artifactId>partial-app</artifactId>
+            <version>1.0</version>
+            <type>war</type>
+        </dependency>
     </dependencies>
 
     <build>
