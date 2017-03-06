@@ -41,12 +41,14 @@
         </dependency>
     </dependencies>
 
+    <!-- GENERATION APPLICATION.XML IN META-INF FOLDER -->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
                 <configuration>
+
                     <modules>
                         <webModule>
                             <groupId>org.demo.app</groupId>
