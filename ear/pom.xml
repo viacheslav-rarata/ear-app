@@ -47,24 +47,26 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
                 <configuration>
-
                     <modules>
                         <webModule>
                             <groupId>org.demo.app</groupId>
                             <artifactId>app1</artifactId>
                             <contextRoot>${app1.root}</contextRoot>
+                            <bundleDir>APP-INF/lib</bundleDir>
                         </webModule>
 
                         <webModule>
                             <groupId>org.demo.app</groupId>
                             <artifactId>app2</artifactId>
                             <contextRoot>${app2.root}</contextRoot>
+                            <bundleDir>APP-INF/lib</bundleDir>
                         </webModule>
 
                         <webModule>
                             <groupId>org.demo.app</groupId>
                             <artifactId>login</artifactId>
                             <contextRoot>${login.root}</contextRoot>
+                            <bundleDir>APP-INF/</bundleDir>
                         </webModule>
                     </modules>
 
