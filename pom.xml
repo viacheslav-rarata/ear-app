@@ -46,6 +46,7 @@
                 <module>shared-image</module>
                 <module>partial-app</module>
                 <module>optional-string-util</module>
+                <module>app-jar</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>
