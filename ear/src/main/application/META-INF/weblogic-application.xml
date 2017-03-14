@@ -7,19 +7,19 @@
 
         <classloader-structure>
             <module-ref>
-                <module-uri>app1-1.0.0.war</module-uri>
+                <module-uri>APP-INF/lib/app1-1.0.0.war</module-uri>
             </module-ref>
         </classloader-structure>
 
         <classloader-structure>
             <module-ref>
-                <module-uri>app2-1.0.0.war</module-uri>
+                <module-uri>APP-INF/lib/app2-1.0.0.war</module-uri>
             </module-ref>
         </classloader-structure>
 
         <classloader-structure>
             <module-ref>
-                <module-uri>login-1.0.war</module-uri>
+                <module-uri>APP-INF/login-1.0.war</module-uri>
             </module-ref>
         </classloader-structure>
 
