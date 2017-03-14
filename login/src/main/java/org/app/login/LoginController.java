@@ -24,7 +24,7 @@ public class LoginController extends HttpServlet {
         try {
             InputStream fileInputStream = getClass().getClassLoader().getResourceAsStream("application.properties");
             properties.load(fileInputStream);
-        } catch (Exception e ) {
+        } catch (Exception e) {
             System.err.println(e.getMessage());
             throw new RuntimeException(e.getMessage());
         }
@@ -39,14 +39,14 @@ public class LoginController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final String uri = request.getRequestURI();
-        String login =  request.getUserPrincipal().getName();
-        request.getSession().setAttribute( "name", login );
+        String login = request.getUserPrincipal().getName();
+        request.getSession().setAttribute("name", login);
         if ((loginApp + "/app3").equals(uri)) {
-             redirect(response, moduleApp1);
+            redirect(response, moduleApp1);
         } else if ((loginApp + "/app1").equals(uri))
             redirect(response, moduleApp2);
         else
-           request.getRequestDispatcher("/main.jsp").forward(request, response);
+            request.getRequestDispatcher("/main.jsp").forward(request, response);
     }
 
     private void redirect(HttpServletResponse response, String url) {

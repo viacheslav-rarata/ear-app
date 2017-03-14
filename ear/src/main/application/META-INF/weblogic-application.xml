@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <weblogic-application xmlns="http://www.bea.com/ns/weblogic/90">
 
+    <!--Для каждого .war-приложения используется отдельный classloader,
+    что позволяет делать redeploy отдельного .war без redeploy всего .ear-приложения.-->
     <classloader-structure>
 
         <classloader-structure>
@@ -22,5 +24,11 @@
         </classloader-structure>
 
     </classloader-structure>
+
+    <!--Расшаривает авторизационные данные на все .war-приложения, развёрнутые в рамках одного .ear-приложения.
+       Повзоляет сделать login/logout на одном из приложений, а применяется для всех остальных автоматически.-->
+    <session-descriptor>
+        <sharing-enabled>true</sharing-enabled>
+    </session-descriptor>
 
 </weblogic-application>

@@ -6,6 +6,9 @@
         <principal-name>sdc_terminal</principal-name>
     </security-role-assignment>
 
+    <!--Сохраняет сессионность во время redeploy.
+     Пользователю не придется снова вводить авторизационные данные,
+     после того, как мы сделаем redeploy этого .war-приложения.-->
     <container-descriptor>
         <save-sessions-enabled>true</save-sessions-enabled>
     </container-descriptor>
